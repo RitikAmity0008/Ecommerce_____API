@@ -18,14 +18,15 @@ Functionality:
 ## Setup
 
    After cloning, use "npm install" and serve the app using "node server". The example provided here are from Postman.
-
-    localhost:3000/api/v1 
-    
+```
+    localhost:8000/products
+  ```  
 ## 1. View Inventory 
 
    Admin can view all the products available in inventory and sending a `GET` request.
-   
-    /products
+   ```
+    /products/lists
+```
 ![s2](https://github.com/RitikAmity0008/Ecommerce-API/assets/140295863/37135b61-2737-4130-ac90-5897db415a18)
 
 
@@ -36,8 +37,9 @@ Functionality:
 
 ## 2. Create Products
    Admin can enter new products by specifying the name and quantity in form  and sending a `POST` request.
-
+```
     /products/create
+```
     
    ![s1](https://github.com/RitikAmity0008/Ecommerce-API/assets/140295863/3c1fa010-44f6-4dc2-879c-217ae654ee07)
 
@@ -45,9 +47,9 @@ Functionality:
 ## 3. Delete Products
   
    Admin can delete products by passing the the product id and sending a `DELETE` request.
-  
+  ```
       /products/:id
-
+```
 ![s4](https://github.com/RitikAmity0008/Ecommerce-API/assets/140295863/0012f329-dd6f-4c4d-9f73-0256b91deb6e)
 
       
@@ -59,9 +61,9 @@ Functionality:
 ## 4. Update Quantity of Products
 
    Admin can update  the quantity of a product by passing the product id and the quantity by which the product may be incremented or        decremented by and sending a `post` Request.
-   
-    /products/:id/update_quantity/?number=100
-
+   ```
+    /update_quantity/:id
+```
 
    
 ![S3](https://github.com/RitikAmity0008/Ecommerce-API/assets/140295863/38c9df13-ae94-432e-b320-0493989befb2)
@@ -81,15 +83,15 @@ Ecommerce-API
     |              
     |
     |                  
-    |--->controllers-->|-->api-->|-->vi-->|-->productController.js
+    |--->controllers-->|-->api-->|-->productController.js
     |                  |-->homeController.js
     |
     |     
     |
     |--->models------->|-->products.js             
     |                  
-    |--->routes------->|---->api------>|------>vi----->|-->product.js
-    |                  |---->index.js                  |---->index.js
+    |--->routes------->|---->api------>|-->product.js
+    |                  |---->index.js                 
     |
     |
     |-->.gitignore
